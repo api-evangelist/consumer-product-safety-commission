@@ -1,6 +1,6 @@
 url: https://raw.githubusercontent.com/api-evangelist/consumer-product-safety-commission/refs/heads/main/apis.yml
 apis: []
-name: Consumer Product Safety Commission (CPSC)
+name: Consumer Product Safety Commission
 tags:
   - Federal Government
 type: Contract
