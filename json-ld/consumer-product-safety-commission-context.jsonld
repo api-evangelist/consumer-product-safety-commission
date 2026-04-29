@@ -1,0 +1,64 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "cpsc": "https://www.cpsc.gov/schema/",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+
+    "Recall": {
+      "@id": "cpsc:Recall",
+      "@context": {
+        "id": "cpsc:RecallID",
+        "recallNumber": "cpsc:RecallNumber",
+        "title": "schema:name",
+        "description": "schema:description",
+        "url": {
+          "@id": "schema:url",
+          "@type": "xsd:anyURI"
+        },
+        "consumerContact": "cpsc:ConsumerContact",
+        "recallDate": {
+          "@id": "cpsc:RecallDate",
+          "@type": "xsd:date"
+        },
+        "lastPublishDate": {
+          "@id": "cpsc:LastPublishDate",
+          "@type": "xsd:date"
+        },
+        "products": "cpsc:Products",
+        "images": "cpsc:Images",
+        "injuries": "cpsc:Injuries",
+        "manufacturers": "cpsc:Manufacturers",
+        "retailers": "cpsc:Retailers",
+        "importers": "cpsc:Importers",
+        "distributors": "cpsc:Distributors",
+        "manufacturerCountries": "cpsc:ManufacturerCountries",
+        "hazards": "cpsc:Hazards",
+        "remedies": "cpsc:Remedies",
+        "remedyOptions": "cpsc:RemedyOptions"
+      }
+    },
+
+    "Product": {
+      "@id": "cpsc:Product",
+      "@context": {
+        "name": "schema:name",
+        "description": "schema:description",
+        "model": "cpsc:Model",
+        "type": "cpsc:Type",
+        "categoryID": "cpsc:CategoryID",
+        "numberOfUnits": "cpsc:NumberOfUnits"
+      }
+    },
+
+    "Hazard": {
+      "@id": "cpsc:Hazard",
+      "@context": {
+        "name": "schema:name",
+        "hazardType": "cpsc:HazardType",
+        "hazardTypeID": "cpsc:HazardTypeID"
+      }
+    }
+  }
+}

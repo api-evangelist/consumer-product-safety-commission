@@ -1,0 +1,98 @@
+# Naftiko capabilities profile for the CPSC Recalls API.
+# Capabilities cover the highest-leverage queries against the
+# SaferProducts.gov recall retrieval web service.
+provider: consumer-product-safety-commission
+name: Consumer Product Safety Commission
+description: >-
+  Public CPSC recalls API: search and retrieve recall records published
+  on cpsc.gov, including products, hazards, injuries, manufacturers,
+  retailers, importers, and distributors.
+capabilities:
+  - id: cpsc.recalls.search
+    name: Search recalls
+    description: Search recall records by any combination of fields exposed by the SaferProducts.gov recalls service.
+    api: consumer-product-safety-commission:recalls
+    inputs:
+      - format
+      - RecallID
+      - RecallNumber
+      - RecallTitle
+      - RecallDateStart
+      - RecallDateEnd
+      - ProductName
+      - ProductDescription
+      - ProductModel
+      - ProductType
+      - Hazard
+      - Manufacturer
+      - Retailer
+      - Importer
+      - Distributor
+      - ManufacturerCountry
+      - UPC
+      - Remedy
+    outputs:
+      - recalls
+
+  - id: cpsc.recalls.by-id
+    name: Get recall by ID
+    description: Retrieve a single recall record by RecallID.
+    api: consumer-product-safety-commission:recalls
+    inputs:
+      - RecallID
+      - format
+    outputs:
+      - recall
+
+  - id: cpsc.recalls.by-date-range
+    name: Search recalls by date range
+    description: List recall records published in a specific recall-date window.
+    api: consumer-product-safety-commission:recalls
+    inputs:
+      - RecallDateStart
+      - RecallDateEnd
+      - format
+    outputs:
+      - recalls
+
+  - id: cpsc.recalls.by-upc
+    name: Lookup recall by UPC
+    description: Look up recall records associated with a specific product UPC.
+    api: consumer-product-safety-commission:recalls
+    inputs:
+      - UPC
+      - format
+    outputs:
+      - recalls
+
+  - id: cpsc.recalls.by-manufacturer
+    name: Search recalls by manufacturer
+    description: List recall records associated with a manufacturer name (wildcard match).
+    api: consumer-product-safety-commission:recalls
+    inputs:
+      - Manufacturer
+      - ManufacturerCountry
+      - format
+    outputs:
+      - recalls
+
+  - id: cpsc.recalls.by-hazard
+    name: Search recalls by hazard
+    description: List recall records associated with a hazard term (wildcard match).
+    api: consumer-product-safety-commission:recalls
+    inputs:
+      - Hazard
+      - format
+    outputs:
+      - recalls
+
+  - id: cpsc.recalls.recent
+    name: List recently published recalls
+    description: Use LastPublishDate filters to retrieve recalls published in a given window.
+    api: consumer-product-safety-commission:recalls
+    inputs:
+      - LastPublishDateStart
+      - LastPublishDateEnd
+      - format
+    outputs:
+      - recalls

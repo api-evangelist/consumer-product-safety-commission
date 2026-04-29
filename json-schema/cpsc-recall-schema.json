@@ -1,0 +1,127 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/consumer-product-safety-commission/refs/heads/main/json-schema/cpsc-recall-schema.json",
+  "title": "CPSC Recall",
+  "description": "Schema for a recall record returned by the CPSC SaferProducts.gov recalls API.",
+  "type": "object",
+  "properties": {
+    "RecallID": { "type": "integer" },
+    "RecallNumber": { "type": "string" },
+    "RecallDate": { "type": "string", "format": "date" },
+    "Description": { "type": "string" },
+    "URL": { "type": "string", "format": "uri" },
+    "Title": { "type": "string" },
+    "ConsumerContact": { "type": "string" },
+    "LastPublishDate": { "type": "string", "format": "date" },
+    "Products": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Name": { "type": "string" },
+          "Description": { "type": "string" },
+          "Model": { "type": "string" },
+          "Type": { "type": "string" },
+          "CategoryID": { "type": "string" },
+          "NumberOfUnits": { "type": "string" }
+        }
+      }
+    },
+    "Inconjunctions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": { "Country": { "type": "string" } }
+      }
+    },
+    "Images": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "URL": { "type": "string", "format": "uri" },
+          "Caption": { "type": "string" }
+        }
+      }
+    },
+    "Injuries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": { "Name": { "type": "string" } }
+      }
+    },
+    "Manufacturers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "CompanyID": { "type": "integer" },
+          "Name": { "type": "string" },
+          "Country": { "type": "string" }
+        }
+      }
+    },
+    "Retailers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": { "Name": { "type": "string" } }
+      }
+    },
+    "Importers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": { "Name": { "type": "string" } }
+      }
+    },
+    "Distributors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": { "Name": { "type": "string" } }
+      }
+    },
+    "ManufacturerCountries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": { "Country": { "type": "string" } }
+      }
+    },
+    "ProductUPCs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": { "UPC": { "type": "string" } }
+      }
+    },
+    "Hazards": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Name": { "type": "string" },
+          "HazardType": { "type": "string" },
+          "HazardTypeID": { "type": "integer" }
+        }
+      }
+    },
+    "Remedies": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": { "Name": { "type": "string" } }
+      }
+    },
+    "RemedyOptions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": { "Option": { "type": "string" } }
+      }
+    }
+  },
+  "required": ["RecallID", "RecallNumber"]
+}

@@ -1,0 +1,82 @@
+extends:
+  - spectral:oas
+
+# Spectral linting rules for the CPSC Recalls API.
+# Tuned to saferproducts.gov / cpsc.gov public-data conventions: HTTPS,
+# unauthenticated public access, JSON or XML output, and PascalCase
+# query parameter names.
+rules:
+  cpsc-info-contact:
+    description: API contact information must be present.
+    severity: error
+    given: "$.info"
+    then:
+      field: contact
+      function: truthy
+
+  cpsc-server-https:
+    description: All server URLs must use HTTPS.
+    severity: error
+    given: "$.servers[*].url"
+    then:
+      function: pattern
+      functionOptions:
+        match: "^https://"
+
+  cpsc-server-host:
+    description: Server URLs must point to a *.cpsc.gov or saferproducts.gov host.
+    severity: warn
+    given: "$.servers[*].url"
+    then:
+      function: pattern
+      functionOptions:
+        match: "(cpsc\\.gov|saferproducts\\.gov)"
+
+  cpsc-operation-id:
+    description: Every operation must declare a unique operationId.
+    severity: error
+    given: "$.paths[*][get,post,put,patch,delete]"
+    then:
+      field: operationId
+      function: truthy
+
+  cpsc-operation-tags:
+    description: Operations must declare at least one tag.
+    severity: warn
+    given: "$.paths[*][get,post,put,patch,delete]"
+    then:
+      field: tags
+      function: schema
+      functionOptions:
+        schema:
+          type: array
+          minItems: 1
+
+  cpsc-format-parameter:
+    description: GET endpoints should accept a `format` parameter for JSON or XML.
+    severity: info
+    given: "$.paths[*].get"
+    then:
+      field: parameters
+      function: schema
+      functionOptions:
+        schema:
+          type: array
+          contains:
+            type: object
+            properties:
+              name:
+                enum: ["format"]
+
+  cpsc-content-types:
+    description: Responses should declare application/json and application/xml.
+    severity: info
+    given: "$.paths[*].get.responses['200'].content"
+    then:
+      function: schema
+      functionOptions:
+        schema:
+          type: object
+          anyOf:
+            - required: ["application/json"]
+            - required: ["application/xml"]
