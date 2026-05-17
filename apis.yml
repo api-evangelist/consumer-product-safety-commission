@@ -17,7 +17,7 @@ created: '2024-12-25'
 modified: '2026-04-29'
 position: Consumer
 specificationVersion: '0.19'
-x-type: government
+kind: government
 description: >-
   The U.S. Consumer Product Safety Commission (CPSC) is the federal agency
   responsible for protecting the public from unreasonable risks of injury
@@ -86,11 +86,11 @@ common:
   - type: Programmers Guide
     url: >-
       https://cpsc.gov/s3fs-public/RecallRetrievalWebServicesProgrammersGuide20180917.pdf
-  - type: Privacy Policy
+  - type: PrivacyPolicy
     url: https://www.cpsc.gov/Newsroom/Privacy-and-Security-Statement
-  - type: Terms of Service
+  - type: TermsOfService
     url: https://www.cpsc.gov/Newsroom/Privacy-and-Security-Statement
-  - type: JSON-LD
+  - type: JSONLD
     url: json-ld/consumer-product-safety-commission-context.jsonld
   - type: JSONSchema
     url: json-schema/cpsc-recall-schema.json
