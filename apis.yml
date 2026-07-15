@@ -62,6 +62,8 @@ apis:
       SaferProducts.gov. Authenticated with a basic-auth header where the registered application key is sent as the
       username (no password).
 common:
+  - type: AgenticAccess
+    url: agentic-access/consumer-product-safety-commission-agentic-access.yml
   - type: DomainSecurity
     url: security/consumer-product-safety-commission-domain-security.yml
   - type: Website
