@@ -1,0 +1,217 @@
+openapi: 3.1.0
+info:
+  title: CPSC Recalls API
+  description: >-
+    The U.S. Consumer Product Safety Commission Recalls Retrieval Web
+    Service is a public, unauthenticated REST API that returns recall
+    records published on cpsc.gov. The endpoint supports XML and JSON
+    output and case-insensitive wildcard search across recall fields
+    such as recall number, company, product type, hazard, country, and
+    UPC.
+  version: '1.4'
+  contact:
+    name: U.S. Consumer Product Safety Commission
+    url: https://www.cpsc.gov/
+servers:
+  - url: https://www.saferproducts.gov/RestWebServices
+    description: SaferProducts.gov public REST endpoint
+paths:
+  /Recall:
+    get:
+      operationId: searchRecalls
+      summary: Search CPSC recalls
+      description: >-
+        Search recalls by any combination of recall number, date,
+        company, product type, hazard, country, language, or UPC.
+      tags:
+        - Recalls
+      parameters:
+        - name: format
+          in: query
+          schema: { type: string, enum: [json, xml], default: xml }
+        - name: RecallID
+          in: query
+          schema: { type: integer }
+        - name: RecallNumber
+          in: query
+          schema: { type: string }
+        - name: RecallTitle
+          in: query
+          schema: { type: string }
+        - name: RecallDateStart
+          in: query
+          schema: { type: string, format: date }
+        - name: RecallDateEnd
+          in: query
+          schema: { type: string, format: date }
+        - name: LastPublishDateStart
+          in: query
+          schema: { type: string, format: date }
+        - name: LastPublishDateEnd
+          in: query
+          schema: { type: string, format: date }
+        - name: RecallURL
+          in: query
+          schema: { type: string }
+        - name: ConsumerContact
+          in: query
+          schema: { type: string }
+        - name: ProductName
+          in: query
+          schema: { type: string }
+        - name: ProductDescription
+          in: query
+          schema: { type: string }
+        - name: ProductModel
+          in: query
+          schema: { type: string }
+        - name: ProductType
+          in: query
+          schema: { type: string }
+        - name: InconjunctionURL
+          in: query
+          schema: { type: string }
+        - name: ImageURL
+          in: query
+          schema: { type: string }
+        - name: Injury
+          in: query
+          schema: { type: string }
+        - name: Manufacturer
+          in: query
+          schema: { type: string }
+        - name: Retailer
+          in: query
+          schema: { type: string }
+        - name: Importer
+          in: query
+          schema: { type: string }
+        - name: Distributor
+          in: query
+          schema: { type: string }
+        - name: ManufacturerCountry
+          in: query
+          schema: { type: string }
+        - name: UPC
+          in: query
+          schema: { type: string }
+        - name: Hazard
+          in: query
+          schema: { type: string }
+        - name: Remedy
+          in: query
+          schema: { type: string }
+        - name: RemedyOption
+          in: query
+          schema: { type: string }
+      responses:
+        '200':
+          description: Matching recall records
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Recall'
+            application/xml: {}
+components:
+  schemas:
+    Recall:
+      type: object
+      properties:
+        RecallID: { type: integer }
+        RecallNumber: { type: string }
+        RecallDate: { type: string, format: date }
+        Description: { type: string }
+        URL: { type: string, format: uri }
+        Title: { type: string }
+        ConsumerContact: { type: string }
+        LastPublishDate: { type: string, format: date }
+        Products:
+          type: array
+          items:
+            type: object
+            properties:
+              Name: { type: string }
+              Description: { type: string }
+              Model: { type: string }
+              Type: { type: string }
+              CategoryID: { type: string }
+              NumberOfUnits: { type: string }
+        Inconjunctions:
+          type: array
+          items:
+            type: object
+            properties:
+              Country: { type: string }
+        Images:
+          type: array
+          items:
+            type: object
+            properties:
+              URL: { type: string, format: uri }
+              Caption: { type: string }
+        Injuries:
+          type: array
+          items:
+            type: object
+            properties:
+              Name: { type: string }
+        Manufacturers:
+          type: array
+          items:
+            type: object
+            properties:
+              CompanyID: { type: integer }
+              Name: { type: string }
+              Country: { type: string }
+        Retailers:
+          type: array
+          items:
+            type: object
+            properties:
+              Name: { type: string }
+        Importers:
+          type: array
+          items:
+            type: object
+            properties:
+              Name: { type: string }
+        Distributors:
+          type: array
+          items:
+            type: object
+            properties:
+              Name: { type: string }
+        ManufacturerCountries:
+          type: array
+          items:
+            type: object
+            properties:
+              Country: { type: string }
+        ProductUPCs:
+          type: array
+          items:
+            type: object
+            properties:
+              UPC: { type: string }
+        Hazards:
+          type: array
+          items:
+            type: object
+            properties:
+              Name: { type: string }
+              HazardType: { type: string }
+              HazardTypeID: { type: integer }
+        Remedies:
+          type: array
+          items:
+            type: object
+            properties:
+              Name: { type: string }
+        RemedyOptions:
+          type: array
+          items:
+            type: object
+            properties:
+              Option: { type: string }

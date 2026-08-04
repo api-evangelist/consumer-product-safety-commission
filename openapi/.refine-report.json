@@ -1,0 +1,14 @@
+{
+  "provider": "consumer-product-safety-commission",
+  "sources": [
+    "consumer-product-safety-commission-recalls-api-openapi.yml"
+  ],
+  "outputs": [
+    "consumer-product-safety-commission-recalls-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
