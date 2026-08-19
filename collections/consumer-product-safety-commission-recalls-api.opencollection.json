@@ -1,0 +1,161 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "CPSC Recalls API",
+    "version": "1.4"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Recalls",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Search CPSC recalls",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.saferproducts.gov/RestWebServices/Recall",
+            "params": [
+              {
+                "name": "format",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "RecallID",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "RecallNumber",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "RecallTitle",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "RecallDateStart",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "RecallDateEnd",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "LastPublishDateStart",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "LastPublishDateEnd",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "RecallURL",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "ConsumerContact",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "ProductName",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "ProductDescription",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "ProductModel",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "ProductType",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "InconjunctionURL",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "ImageURL",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "Injury",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "Manufacturer",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "Retailer",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "Importer",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "Distributor",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "ManufacturerCountry",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "UPC",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "Hazard",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "Remedy",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "RemedyOption",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Search recalls by any combination of recall number, date, company, product type, hazard, country, language, or UPC."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

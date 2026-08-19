@@ -1,0 +1,338 @@
+{
+  "item": [
+    {
+      "id": "e2d9e201-a676-4c36-a38d-32eee52ad180",
+      "name": "Recalls",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "3d59ded7-d7e3-4c72-b288-5ab5eed6998d",
+          "name": "Search CPSC recalls",
+          "request": {
+            "name": "Search CPSC recalls",
+            "description": {
+              "content": "Search recalls by any combination of recall number, date, company, product type, hazard, country, language, or UPC.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "Recall"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "format",
+                  "value": "xml"
+                },
+                {
+                  "disabled": false,
+                  "key": "RecallID",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "RecallNumber",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "RecallTitle",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "RecallDateStart",
+                  "value": "<date>"
+                },
+                {
+                  "disabled": false,
+                  "key": "RecallDateEnd",
+                  "value": "<date>"
+                },
+                {
+                  "disabled": false,
+                  "key": "LastPublishDateStart",
+                  "value": "<date>"
+                },
+                {
+                  "disabled": false,
+                  "key": "LastPublishDateEnd",
+                  "value": "<date>"
+                },
+                {
+                  "disabled": false,
+                  "key": "RecallURL",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "ConsumerContact",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "ProductName",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "ProductDescription",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "ProductModel",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "ProductType",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "InconjunctionURL",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "ImageURL",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "Injury",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "Manufacturer",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "Retailer",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "Importer",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "Distributor",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "ManufacturerCountry",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "UPC",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "Hazard",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "Remedy",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "RemedyOption",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "23da52ce-fb0e-4a8d-a8fd-bb8a771bb930",
+              "name": "Matching recall records",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "Recall"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "format",
+                      "value": "xml"
+                    },
+                    {
+                      "key": "RecallID",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "RecallNumber",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "RecallTitle",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "RecallDateStart",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "RecallDateEnd",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "LastPublishDateStart",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "LastPublishDateEnd",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "RecallURL",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "ConsumerContact",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "ProductName",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "ProductDescription",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "ProductModel",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "ProductType",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "InconjunctionURL",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "ImageURL",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "Injury",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "Manufacturer",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "Retailer",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "Importer",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "Distributor",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "ManufacturerCountry",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "UPC",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "Hazard",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "Remedy",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "RemedyOption",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"RecallID\": 2951,\n    \"RecallNumber\": \"string\",\n    \"RecallDate\": \"2015-11-19\",\n    \"Description\": \"string\",\n    \"URL\": \"https://UaoqnMEQSMlNSZuusxyuZ.noqrfZK0-F1nTtBx850uxJDqSqvsR6BZ1blcFShTXrnsfa.j-kToiloopeMxcM\",\n    \"Title\": \"string\",\n    \"ConsumerContact\": \"string\",\n    \"LastPublishDate\": \"2002-03-29\",\n    \"Products\": [\n      {\n        \"Name\": \"string\",\n        \"Description\": \"string\",\n        \"Model\": \"string\",\n        \"Type\": \"string\",\n        \"CategoryID\": \"string\",\n        \"NumberOfUnits\": \"string\"\n      },\n      {\n        \"Name\": \"string\",\n        \"Description\": \"string\",\n        \"Model\": \"string\",\n        \"Type\": \"string\",\n        \"CategoryID\": \"string\",\n        \"NumberOfUnits\": \"string\"\n      }\n    ],\n    \"Inconjunctions\": [\n      {\n        \"Country\": \"string\"\n      },\n      {\n        \"Country\": \"string\"\n      }\n    ],\n    \"Images\": [\n      {\n        \"URL\": \"http://hpQtxMJeuhXypEXpdaorfjfIZjoi.rcuVk0NmWR2pclEnRLJDZWUAq.zL1WhYaYbXS\",\n        \"Caption\": \"string\"\n      },\n      {\n        \"URL\": \"http://AbPH.rvi+Lo++dPZdoamAYHEkZH2j.r0xX1HrqsRZEi.pEcEke\",\n        \"Caption\": \"string\"\n      }\n    ],\n    \"Injuries\": [\n      {\n        \"Name\": \"string\"\n      },\n      {\n        \"Name\": \"string\"\n      }\n    ],\n    \"Manufacturers\": [\n      {\n        \"CompanyID\": 3707,\n        \"Name\": \"string\",\n        \"Country\": \"string\"\n      },\n      {\n        \"CompanyID\": 8318,\n        \"Name\": \"string\",\n        \"Country\": \"string\"\n      }\n    ],\n    \"Retailers\": [\n      {\n        \"Name\": \"string\"\n      },\n      {\n        \"Name\": \"string\"\n      }\n    ],\n    \"Importers\": [\n      {\n        \"Name\": \"string\"\n      },\n      {\n        \"Name\": \"string\"\n      }\n    ],\n    \"Distributors\": [\n      {\n        \"Name\": \"string\"\n      },\n      {\n        \"Name\": \"string\"\n      }\n    ],\n    \"ManufacturerCountries\": [\n      {\n        \"Country\": \"string\"\n      },\n      {\n        \"Country\": \"string\"\n      }\n    ],\n    \"ProductUPCs\": [\n      {\n        \"UPC\": \"string\"\n      },\n      {\n        \"UPC\": \"string\"\n      }\n    ],\n    \"Hazards\": [\n      {\n        \"Name\": \"string\",\n        \"HazardType\": \"string\",\n        \"HazardTypeID\": 4496\n      },\n      {\n        \"Name\": \"string\",\n        \"HazardType\": \"string\",\n        \"HazardTypeID\": 870\n      }\n    ],\n    \"Remedies\": [\n      {\n        \"Name\": \"string\"\n      },\n      {\n        \"Name\": \"string\"\n      }\n    ],\n    \"RemedyOptions\": [\n      {\n        \"Option\": \"string\"\n      },\n      {\n        \"Option\": \"string\"\n      }\n    ]\n  },\n  {\n    \"RecallID\": 5098,\n    \"RecallNumber\": \"string\",\n    \"RecallDate\": \"2025-02-08\",\n    \"Description\": \"string\",\n    \"URL\": \"https://vmUeuwpuBPPMHirhdZwAdVkYjVlfTKoMo.hdBXCDzDm8CEz\",\n    \"Title\": \"string\",\n    \"ConsumerContact\": \"string\",\n    \"LastPublishDate\": \"1983-09-12\",\n    \"Products\": [\n      {\n        \"Name\": \"string\",\n        \"Description\": \"string\",\n        \"Model\": \"string\",\n        \"Type\": \"string\",\n        \"CategoryID\": \"string\",\n        \"NumberOfUnits\": \"string\"\n      },\n      {\n        \"Name\": \"string\",\n        \"Description\": \"string\",\n        \"Model\": \"string\",\n        \"Type\": \"string\",\n        \"CategoryID\": \"string\",\n        \"NumberOfUnits\": \"string\"\n      }\n    ],\n    \"Inconjunctions\": [\n      {\n        \"Country\": \"string\"\n      },\n      {\n        \"Country\": \"string\"\n      }\n    ],\n    \"Images\": [\n      {\n        \"URL\": \"https://TbmaeGwwPXUgwMnUPyiJtCZMbS.bfkxg,IUkEATOfUKA2EPAXDVwYtp3TB8pVCtY-Ti9SHHfIa+a8aE\",\n        \"Caption\": \"string\"\n      },\n      {\n        \"URL\": \"https://ONOouzJYbVY.fblahXJ7NC+-7rC5AJZ5T\",\n        \"Caption\": \"string\"\n      }\n    ],\n    \"Injuries\": [\n      {\n        \"Name\": \"string\"\n      },\n      {\n        \"Name\": \"string\"\n      }\n    ],\n    \"Manufacturers\": [\n      {\n        \"CompanyID\": 6181,\n        \"Name\": \"string\",\n        \"Country\": \"string\"\n      },\n      {\n        \"CompanyID\": 2568,\n        \"Name\": \"string\",\n        \"Country\": \"string\"\n      }\n    ],\n    \"Retailers\": [\n      {\n        \"Name\": \"string\"\n      },\n      {\n        \"Name\": \"string\"\n      }\n    ],\n    \"Importers\": [\n      {\n        \"Name\": \"string\"\n      },\n      {\n        \"Name\": \"string\"\n      }\n    ],\n    \"Distributors\": [\n      {\n        \"Name\": \"string\"\n      },\n      {\n        \"Name\": \"string\"\n      }\n    ],\n    \"ManufacturerCountries\": [\n      {\n        \"Country\": \"string\"\n      },\n      {\n        \"Country\": \"string\"\n      }\n    ],\n    \"ProductUPCs\": [\n      {\n        \"UPC\": \"string\"\n      },\n      {\n        \"UPC\": \"string\"\n      }\n    ],\n    \"Hazards\": [\n      {\n        \"Name\": \"string\",\n        \"HazardType\": \"string\",\n        \"HazardTypeID\": 9888\n      },\n      {\n        \"Name\": \"string\",\n        \"HazardType\": \"string\",\n        \"HazardTypeID\": 6351\n      }\n    ],\n    \"Remedies\": [\n      {\n        \"Name\": \"string\"\n      },\n      {\n        \"Name\": \"string\"\n      }\n    ],\n    \"RemedyOptions\": [\n      {\n        \"Option\": \"string\"\n      },\n      {\n        \"Option\": \"string\"\n      }\n    ]\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://www.saferproducts.gov/RestWebServices",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "7e2efd55-5b34-4e0e-89ac-27c361e6c5e1",
+    "name": "CPSC Recalls API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The U.S. Consumer Product Safety Commission Recalls Retrieval Web Service is a public, unauthenticated REST API that returns recall records published on cpsc.gov. The endpoint supports XML and JSON output and case-insensitive wildcard search across recall fields such as recall number, company, product type, hazard, country, and UPC.\n\nContact Support:\n Name: U.S. Consumer Product Safety Commission",
+      "type": "text/plain"
+    }
+  }
+}
