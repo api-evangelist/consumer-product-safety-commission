@@ -3,6 +3,13 @@ name: Consumer Product Safety Commission
 url: https://raw.githubusercontent.com/api-evangelist/consumer-product-safety-commission/refs/heads/main/apis.yml
 tags:
   - Consumer Protection
+  - Federal-Government
+  - Hazards
+  - Open Data
+  - Product Safety
+  - Recalls
+tags_raw:
+  - Consumer Protection
   - Federal Government
   - Hazards
   - Open Data
