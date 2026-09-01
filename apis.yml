@@ -40,7 +40,7 @@ accessModel:
   - plans
   generated: '2026-07-22'
   method: derived
-image: https://kinlane-productions2.s3.amazonaws.com/apis-json-icons/apis-json.png
+image: ''
 access: 3rd-Party
 created: '2024-12-25'
 modified: '2026-05-19'
