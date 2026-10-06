@@ -44,7 +44,7 @@ accessModel:
 image: ''
 access: 3rd-Party
 created: '2024-12-25'
-modified: '2026-05-19'
+modified: '2026-10-06'
 position: Consuming
 specificationVersion: '0.23'
 kind: government
@@ -87,6 +87,8 @@ apis:
   - type: Reference
     url: https://cpsc.gov/s3fs-public/RecallRetrievalWebServicesProgrammersGuide20180917.pdf
 common:
+  - url: https://www.cpsc.gov/rss.xml
+    type: BlogRSS
   - type: AgenticAccess
     url: agentic-access/consumer-product-safety-commission-agentic-access.yml
   - type: DomainSecurity
