@@ -1,4 +1,4 @@
-# Consumer Product Safety Commission (consumer-product-safety-commission)
+# Consumer Product Safety Commission
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,88 +66,134 @@
 
 The U.S. Consumer Product Safety Commission (CPSC) is the federal agency responsible for protecting the public from unreasonable risks of injury or death associated with consumer products such as toys, household items, electronics, and furniture. CPSC publishes a public, unauthenticated Recalls Retrieval Web Service that exposes recall records (with products, hazards, manufacturers, retailers, distributors, importers, and remedies) in JSON or XML, plus the SaferProducts.gov OData service for incident-report data accessed by application key.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/consumer-product-safety-commission/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/consumer-product-safety-commission/refs/heads/main/apis.yml)
+**Areas:** Consumer Protection · Federal Government · Hazards · Open Data · Product Safety · Recalls
 
-## Scope
+## Consumer Product Safety Commission on APIs.io
 
-- **Type:** Index
-- **Position:** Consumer
-- **Access:** 3rd-Party
+Everything profiled for Consumer Product Safety Commission is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/consumer-product-safety-commission/](https://apis.io/providers/consumer-product-safety-commission/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (2)
 
-- Consumer Protection
-- Federal Government
-- Hazards
-- Open Data
-- Product Safety
-- Recalls
+- [SaferProducts.gov OData API](https://apis.io/apis/consumer-product-safety-commission/saferproducts/) — OData web service exposing publicly published consumer product incident-report data submitted through SaferProducts.gov. Authenticated with a basic-auth…
+- [Consumer Product Safety Commission Recalls API](https://apis.io/apis/consumer-product-safety-commission/consumer-product-safety-commission-recalls-api/) — The Recalls API from Consumer Product Safety Commission — 1 operation(s) for recalls.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2024-12-25
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### CPSC Recalls API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-Public REST web service that returns CPSC recall records published on cpsc.gov. Supports case-insensitive wildcard search across recall number, date, product type, hazard, country, manufacturer, retailer, importer, distributor, and UPC. Output is available as JSON or XML and the API requires no authentication.
+- [Consumer Product Safety Commission Agentic Access](https://apis.io/agentic-access/consumer-product-safety-commission/consumer-product-safety-commission-agentic-access/)
 
-- **Human URL:** [https://www.cpsc.gov/Recalls/CPSC-Recalls-Application-Program-Interface-API-Information](https://www.cpsc.gov/Recalls/CPSC-Recalls-Application-Program-Interface-API-Information)
-- **Base URL:** `https://www.saferproducts.gov/RestWebServices`
+#### JSON Schema (1)
 
-#### Tags
+The data models the API reads and writes.
 
-- JSON
-- Open Data
-- Recalls
-- REST
-- XML
+- [CPSC Recall](https://apis.io/schemas/consumer-product-safety-commission/cpsc-recall/)
 
-#### Properties
+#### JSON-LD (1)
 
-- [Documentation](https://www.cpsc.gov/Recalls/CPSC-Recalls-Application-Program-Interface-API-Information)
-- [Reference](https://cpsc.gov/s3fs-public/RecallRetrievalWebServicesProgrammersGuide20180917.pdf)
-- [OpenAPI](openapi/cpsc-recalls-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/cpsc-recalls.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/cpsc-recalls.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Linked-data contexts for the provider's vocabulary.
 
-### SaferProducts.gov OData API
+- [Consumer Product Safety Commission Context](https://apis.io/jsonld/consumer-product-safety-commission/consumer-product-safety-commission-context/)
 
-OData web service exposing publicly published consumer product incident-report data submitted through SaferProducts.gov. Authenticated with a basic-auth header where the registered application key is sent as the username (no password).
+#### Collections (2)
 
-- **Human URL:** [https://www.saferproducts.gov/FAQs/FrequentlyAskedQuestions11](https://www.saferproducts.gov/FAQs/FrequentlyAskedQuestions11)
-- **Base URL:** `https://www.saferproducts.gov/WebApi/Cpsc.Cpsrms.Web.Api.svc`
+Postman and Open Collection request collections.
 
-#### Tags
+- [CPSC Recalls API](https://apis.io/collections/consumer-product-safety-commission/open-consumer-product-safety-commission-recalls-api/)
+- [CPSC Recalls API](https://apis.io/collections/consumer-product-safety-commission/open-cpsc-recalls/)
 
-- Incident Reports
-- OData
-- Open Data
+#### Governance rules (2)
 
-#### Properties
+Spectral rulesets for the provider's contracts.
 
-- [Documentation](https://www.saferproducts.gov/FAQs/FrequentlyAskedQuestions11)
-- [Reference](https://www.saferproducts.gov/WebApi/Cpsc.Cpsrms.Web.Api.svc/$metadata)
-- [Postman Collection](collections/cpsc-recalls.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/cpsc-recalls.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Consumer Product Safety Commission — jsonschema rules](https://apis.io/rules/consumer-product-safety-commission/consumer-product-safety-commission-jsonschema-spectral-rules/)
+- [Consumer Product Safety Commission API Rules](https://apis.io/rules/consumer-product-safety-commission/consumer-product-safety-commission-rules/)
 
-## Common Properties
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Consumer Product Safety Commission Domain Security](https://apis.io/security/consumer-product-safety-commission/consumer-product-safety-commission-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Consumer Product Safety Commission Plans Pricing](https://apis.io/plans/consumer-product-safety-commission/consumer-product-safety-commission-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Consumer Product Safety Commission Rate Limits](https://apis.io/rate-limits/consumer-product-safety-commission/consumer-product-safety-commission-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Consumer Product Safety Commission Finops](https://apis.io/finops/consumer-product-safety-commission/consumer-product-safety-commission-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.cpsc.gov/)
-- [Recalls](https://www.cpsc.gov/Recalls)
-- [Data](https://www.cpsc.gov/Data)
-- [Safer Products.gov](https://www.saferproducts.gov/)
-- [Public  Search](https://www.saferproducts.gov/PublicSearch)
-- [Programmers  Guide](https://cpsc.gov/s3fs-public/RecallRetrievalWebServicesProgrammersGuide20180917.pdf)
-- [Privacy Policy](https://www.cpsc.gov/Newsroom/Privacy-and-Security-Statement)
-- [Terms of Service](https://www.cpsc.gov/Newsroom/Privacy-and-Security-Statement)
-- [JSON-LD](json-ld/consumer-product-safety-commission-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-- [JSON Schema](json-schema/cpsc-recall-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [Spectral Rules](rules/consumer-product-safety-commission-rules.yml) — [Spectral](https://docs.stoplight.io/docs/spectral)
+- [Terms of service](https://www.cpsc.gov/Newsroom/Privacy-and-Security-Statement)
+- [Privacy policy](https://www.cpsc.gov/Newsroom/Privacy-and-Security-Statement)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 25.5** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 62.5 |
+| Contract quality | 48.1 |
+| Contract governance | 13.6 |
+| Operational transparency | 7.9 |
+| Developer ergonomics | 16.7 |
+| Access clarity | 7.9 |
+
+**Agent readiness 17.8** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | na |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | na |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | na |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 10.8** — Government & Public Sector
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/consumer-product-safety-commission/](https://apis.io/providers/consumer-product-safety-commission/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Consumer Product Safety Commission: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/consumer-product-safety-commission/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
